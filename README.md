@@ -16,12 +16,18 @@ Para la función **isValidaCard** se implemento lo siguiente :
 *  Crear una variable **num** con valor obtenido mediante un prompt ("Ingrese número de tarjeta").
 *  Validar si el valor ingresado son solo números y el campo no debe estar vacio.
 *  Crear dos variables que alojaran valores de mensaje y el acumulador suma :
+```javascript
 var mensaje='';
 var suma =0;
-
+```
 *  Convertir el valor **num** en un arreglo con los digitos separados. Esto mediante split('') y asignarle una variable.
+```javascript
+var  arrayCard=num.split('');
+```
 *  Revertir el orden de los dígito dentro del arreglo.
+```javascript
 var arrayReverse = arrayCard.reverse();
+```
 *  Recorrer los dígitos mediante un for, para validar cada dato.
 *  Si el dígito ocupa una posición impar :
     * Convertirlo a número y multiplicarlo por 2.
@@ -36,7 +42,10 @@ var arrayReverse = arrayCard.reverse();
 *  Convertir los elementos del arreglo que no han sido modificados en números.  
 *  Sumar todos los elementos del arreglo  y alojar el resultado en la variable suma.
 *  Validar según la siguiente condición :
-    * Si suma%10==0 :
+    * Si
+    ```javascript
+    suma%10==0
+    ```
         *  Mostrar mensaje "Tarjeta válida"
     * Sino
         * Mostrar mensaje "Tarjeta Invalida"
