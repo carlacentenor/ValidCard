@@ -3,7 +3,7 @@ La siguiente web ha sido diseñada para validar el número de una tarjeta de cr�
 Más información sobre el algoritmo de Luhn en el siguiente link: [Algortimo_Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn)
 
 Diagrama de flujo :
-![Con titulo](pictures\validacard.png "Validar tarjeta")
+![Con titulo](assets\docs\validacard.png "Validar tarjeta")
 
 La web esta conformada por una página principal llamada Index.html, en la cual ejecuta la función llamada **isValidaCard** alojada en el archivo app.js.
 
