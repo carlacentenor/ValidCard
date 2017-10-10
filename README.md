@@ -3,28 +3,33 @@ La siguiente web ha sido diseñada para validar el número de una tarjeta de cr�
 Más información sobre el algoritmo de Luhn en el siguiente link: [Algortimo_Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn)
 
 Diagrama de flujo :
-![Con titulo](Flowchart.png "Validar tarjeta")
+![Con titulo](pictures\validacard.png "Validar tarjeta")
 
 La web esta conformada por una página principal llamada Index.html, en la cual ejecuta la función llamada **isValidaCard** alojada en el archivo app.js.
 
 La página obtiene la entrada de datos mediante un **prompt** .
-
 ### Especificaciones de la función isValidaCard
 
 Para la función **isValidaCard** se implemento lo siguiente :
 
 *  Crear una variable **num** con valor obtenido mediante un prompt ("Ingrese número de tarjeta").
 *  Validar si el valor ingresado son solo números y el campo no debe estar vacio.
-*  Crear dos variables que alojaran valores de mensaje y el acumulador suma :
 ```javascript
-var mensaje='';
-var suma =0;
+do{
+    var num= prompt("Ingrese número")
+  }
+while (!num  || !/^([0-9])*$/.test(num));
+```
+*  Crear dos variables que alojaran valores de mensaje y el acumulador sum :
+```javascript
+var message='';
+var sum =0;
 ```
 *  Convertir el valor **num** en un arreglo con los digitos separados. Esto mediante split('') y asignarle una variable.
 ```javascript
 var  arrayCard=num.split('');
 ```
-*  Revertir el orden de los dígito dentro del arreglo.
+*  Revertir el orden de los dígitos dentro del arreglo.
 ```javascript
 var arrayReverse = arrayCard.reverse();
 ```
@@ -36,6 +41,7 @@ var arrayReverse = arrayCard.reverse();
             * separar los digitos
             * Sumar los digitos
             * Reemplazar la suma sobre el valor incialmente elegido.
+
         * Si No es asi :
             * Reemplazar el número obtenido sobre el valor inicial.
 *  Si el dígito no ocupa una posición impar lo salta y pasa al siguiente.
@@ -44,9 +50,9 @@ var arrayReverse = arrayCard.reverse();
 *  Validar según la siguiente condición :
     * Si
     ```javascript
-    suma%10==0
+      sum%10==0 ? message = "válido" : message = "inválido"
     ```
-        *  Mostrar mensaje "Tarjeta válida"
+        *  Mostrar mensaje "válido"
     * Sino
-        * Mostrar mensaje "Tarjeta Invalida"
+        * Mostrar mensaje " Inválido"
 * Mostrar el mensaje en la página web
