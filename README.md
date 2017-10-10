@@ -3,14 +3,14 @@ La siguiente web ha sido diseñada para validar el número de una tarjeta de cr�
 Más información sobre el algoritmo de Luhn en el siguiente link: [Algortimo_Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn)
 
 Diagrama de flujo :
-![Con titulo](assets\docs\validacard.png "Validar tarjeta")
+![Sin titulo](assets\docs\validacard.png "Validar tarjeta")
 
-La web esta conformada por una página principal llamada Index.html, en la cual ejecuta la función llamada **isValidaCard** alojada en el archivo app.js.
+La web esta conformada por una página principal llamada Index.html, en la cual ejecuta la función llamada **isValidCard** alojada en el archivo app.js.
 
 La página obtiene la entrada de datos mediante un **prompt** .
 ### Especificaciones de la función isValidaCard
 
-Para la función **isValidaCard** se implemento lo siguiente :
+Para la función **isValidCard** se implemento lo siguiente :
 
 *  Crear una variable **num** con valor obtenido mediante un prompt ("Ingrese número de tarjeta").
 *  Validar si el valor ingresado son solo números y el campo no debe estar vacio.

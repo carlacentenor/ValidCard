@@ -1,4 +1,4 @@
-function isValidaCard(){
+function isValidCard(){
 
 do{
     var num= prompt("Ingrese número")
@@ -43,4 +43,4 @@ return document.write("El número de tarjeta "+ num + " es "+message); // mostra
 }
 
 
-isValidaCard();
+isValidCard();
